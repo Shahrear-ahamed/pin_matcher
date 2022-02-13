@@ -32,7 +32,15 @@ body {
     box-shadow: none;
 }
 
-input[type='text']{
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number']{
+  -moz-appearance: textfield;
     background-color: #3D4153;
     padding: 10px 0px;
     color: #ffffff;
@@ -42,7 +50,7 @@ input[type='text']{
     height: 50px;
     padding: 10px;
 }
-input[type='text']:focus {
+input[type='number']:focus {
     background-color: #3D4153;
     color: #fff;
     font-size: 20px;

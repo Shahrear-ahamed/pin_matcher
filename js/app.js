@@ -8,9 +8,6 @@ function getPin(){
         getPin();
     }
 }
-// typed_number
-// key_pad
-
 document.getElementById("key_pad").addEventListener("click", function(e){
     const numbers = document.getElementById("typed_number")
     const eventValue = e.target.innerText;
@@ -22,7 +19,6 @@ document.getElementById("key_pad").addEventListener("click", function(e){
         numbers.value = numbers.value+eventValue;
     }
 });
-
 function submitPin(){
     const generatedPin = document.getElementById("pin_value");
     const inputPin = document.getElementById("typed_number");
@@ -38,5 +34,10 @@ function submitPin(){
         success.style.display = "none";
         error.style.display = "block";
         inputPin.value = "";
+    }
+    setInterval(myTimer, 4000);
+    function myTimer() {
+        error.style.display= "none";
+        success.style.display= "none";
     }
 }
