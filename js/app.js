@@ -14,6 +14,12 @@ document.getElementById("key_pad").addEventListener("click", function(e){
     if(isNaN(eventValue)){
         if(eventValue == "C"){
             numbers.value = ""
+        }else {
+            const numberMinus =numbers.value;
+            console.log(numberMinus);
+            const numberMinusvalue = numberMinus.slice(0, numberMinus.length-1);
+            console.log(numberMinusvalue);
+            numbers.value = numberMinusvalue;
         }
     }else{
         numbers.value = numbers.value+eventValue;
@@ -35,6 +41,7 @@ function submitPin(){
         error.style.display = "block";
         inputPin.value = "";
     }
+    // set time for remove messages
     setInterval(myTimer, 4000);
     function myTimer() {
         error.style.display= "none";
